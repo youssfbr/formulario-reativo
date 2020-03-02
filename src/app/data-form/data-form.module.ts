@@ -11,6 +11,9 @@ import { DataFormComponent } from './data-form.component';
   imports: [
     CommonModule,
     ReactiveFormsModule
+  ],
+  exports: [
+    DataFormComponent
   ]
 })
 export class DataFormModule { }
