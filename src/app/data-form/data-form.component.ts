@@ -26,7 +26,12 @@ export class DataFormComponent implements OnInit {
   onSubmit(): void {
     console.log(this.formulario);
 
-    this.http.post('https://httpbin.org/post', this.formulario.value).subscribe( dados => console.log(dados));
+    this.http.post('https://httpbin.org/post', this.formulario.value).subscribe( dados => {
+      console.log(dados),
+      this.formulario.reset();
+    },
+      (error: any) => console.log(error)
+    );
   }
 
 }
